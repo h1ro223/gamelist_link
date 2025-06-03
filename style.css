@@ -1,0 +1,123 @@
+/* ベースカラーなど */
+:root {
+  --bg: #fafafa;
+  --card-bg: #fff;
+  --accent: #2196f3;
+  --text: #333;
+  --radius: 12px;
+  --shadow: 0 4px 16px rgba(0,0,0,0.08);
+  --transition: 0.25s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 1rem 1.5rem;
+  text-align: center;
+  background: var(--accent);
+  color: #fff;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+header input[type="search"] {
+  width: 280px;
+  max-width: 90%;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+main.grid {
+  flex: 1;
+  width: min(1200px, 100%);
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* カード */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.card p {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.card a.play-btn {
+  align-self: flex-end;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background var(--transition);
+}
+
+.card a.play-btn:hover,
+.card a.play-btn:focus-visible {
+  background: #1976d2;
+}
+
+footer {
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 0.9rem;
+  background: #ececec;
+}
