@@ -8,13 +8,13 @@
 const games = [
   {
     title: "2D Kart",
-    description: "シンプルな2Dカートレーシング。スマホにも対応。",
+    description: "シンプルな2Dカートレーシング。スマホにも対応（横画面推奨）。",
     url: "https://h1ro223.github.io/2dkart/",
     img: "asset/2dkart-thumb.png" // サムネ画像が無い場合は '' でOK
   },
   {
     title: "Monster Smash",
-    description: "敵を弾き飛ばすアクション。4人協力プレイ対応予定。",
+    description: "敵を弾き飛ばすアクション。某有名ゲームを意識して作りました。",
     url: "https://h1ro223.github.io/Monster-Smash/",
     img: "asset/monster-smash-thumb.png"
   },
